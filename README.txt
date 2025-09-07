@@ -42,7 +42,7 @@ Estas sendo em laboratório com ajuda de instrutor, monitores e colegas de traba
 O desafio aqui foi o uso da sintaxe Python que é novidade para mim. O paradigma da Orientação a Objetos é confortável de se trabalhar.
 Esse dia agregou bastante quanto a troca de ideias com os colegas, aprendemos juntos. 
 	
-Dia 3:
+Dia 2.3:
 
 Foram desenvolvidas duas (02) aplicações Python puro:
 
