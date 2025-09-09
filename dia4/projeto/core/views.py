@@ -4,7 +4,7 @@ from .forms import EnderecoForm
 import requests
 
 def home (request):
-    return render(request, 'app/home.html') #apontado pelo views.home no urls
+    return render(request, 'home.html') #apontado pelo views.home no urls
 # Create your views here.
 def consulta_cep(request):
     

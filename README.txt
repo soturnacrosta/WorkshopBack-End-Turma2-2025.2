@@ -71,3 +71,14 @@ As maiores dificuldades foram no quesito configuração de ambiente virtual, ond
 Resultados do Circuito 1:
 
 Foram desenvolvidos oito (14) softwares, iniciada a documentação, criado e configurado o ambiente virtual, criado o repositório remoto e iniciado configuração Django.
+
+Circuito 2
+
+Dia 1:
+
+Aprofundando no Django, começamos a estudar rotas, requests para API e configuração de API. A maior dificuldade esteve em entender que a pasta 'app' não é criada depois de 'templates' como eu havia entendido através de instruções da inteligencia artificial. 'app' fica antes de 'template', em seguida vem a página renderizada.
+
+O caminho seria: projeto > app > templates > home.html
+O caminho não é: projeto > app > templates > app > home.html
+
+Esse erro tornou as coisas mais complicadas durante o treinamento, mas foi resolvido no fim do dia.
