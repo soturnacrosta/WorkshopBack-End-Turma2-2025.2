@@ -52,6 +52,22 @@ Foram desenvolvidas duas (02) aplicações Python puro:
 Estas sendo em casa. A dificuldade foi menor, pois as quatro aplicações anteriores me preparou e me deixou mais confortável com o desafio.
 Aqui foi iniciada a documentação do projeto.
 
+Dia 3:
+
+Nesse dia foram desenvolvidas oito (08) aplicações Python puro para treinamento de depuração com Excepts. 
+
+	exercicio1.py
+	exercicio2.py
+	exercicio3.py
+	exercicio4.py
+	exercicio5.py
+	exercicio6.py
+	exercicio7.py
+	exercicioExtra.py
+
+Também foi estudado em casa Requests e em laboratório configuração Django. Notou-se uma melhora na navegação entre pastas do terminal.
+As maiores dificuldades foram no quesito configuração de ambiente virtual, onde é necessário estar ativado para fazer alterações nos requisitos técnicos de Python. Como por exemplo, é necessário ativá-lo para poder instalar o Django ou a biblioteca Requests.
+
 Resultados do Circuito 1:
 
-Foram desenvolvidos seis (06) softwares, iniciada a documentação, criado e configurado o ambiente virtual, criado o repositório remoto.
+Foram desenvolvidos oito (14) softwares, iniciada a documentação, criado e configurado o ambiente virtual, criado o repositório remoto e iniciado configuração Django.
