@@ -1,5 +1,5 @@
 """
-URL configuration for projetoteste project.
+URL configuration for projeto project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -15,15 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-# from django.urls import path
-from django.urls import path, include # include inclui as rotas do projeto!
-from app.views import home
-
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/', include('app.urls')),  # Inclui as URLs do app
-    path('app2/', include('app2.urls')), 
-    # path('', home, name='home') # quando tá vazio é a primeira pagina!!!
-
+    path('', include('core.urls'))
 ]
