@@ -1,19 +1,19 @@
 from django.shortcuts import render
 import requests
-from django.views.generic import FormView
+from django.views.generic import FormView, DetailView, ListView, DeleteView
 from .forms import EnderecoForm
 from .models import Endereco
 
 def home (request):
     return render(request, 'home.html') #apontado pelo views.home no urls
 # Create your views here.
-class Consulta_cep(FormView):
+class Consulta_cep (FormView):
     template_name = "consulta_cep.html"
     form_class = EnderecoForm
-    success_url = "/"  # Pode ser qualquer URL, não será usada aqui
+    success_url = "consulta_cep.html"
 
     def form_valid(self, form):
-        cep = form.cleaned_data["cep"].replace("-", "").strip()
+        cep = form.cleaned_data["cep"].replace("-", "")
         url = f'https://viacep.com.br/ws/{cep}/json/'
         response = requests.get(url)
 
@@ -21,28 +21,50 @@ class Consulta_cep(FormView):
             data = response.json()
 
             if "erro" not in data:
-                endereco, created = Endereco.objects.update_or_create(
+
+                cep_obj, created = Endereco.objects.update_or_create(
                     cep=cep,
                     defaults={
-                        "rua": data.get("logradouro", ""),
+
+                       "rua": data.get("logradouro", ""),
                         "bairro": data.get("bairro", ""),
                         "cidade": data.get("localidade", ""),
                         "estado": data.get("uf", "")
                     },
                 )
 
-                # Retorna a página com os dados do endereço
-                return render(self.request, "resultado.html", {"endereco": endereco})
+                self.object = cep_obj
 
-            else:
-                form.add_error("cep", "CEP não encontrado na API.")
+            else: 
+
+                form.add_error("cep", "CEP não encontrado na API em Endereco.")
+                return self.form_invalid(form)
+            
         else:
-            form.add_error("cep", "Erro ao consultar a API do ViaCEP.")
 
-        # Se caiu aqui, é porque deu erro
-        return self.form_invalid(form)
+            form.add_error("cep", "Erro ao consultar CEP na API em Endereco.")
+            return self.form_invalid(form)
+        
+        form.save()
+        return super().form_valid(form)
+
 
     #class Viace
+class Lista_Cep (ListView):
+    model = Endereco 
+    template_name = "viacep/viacep_list.html"
+    context_object_name = "ceps"
+
+class Details_Cep (DetailView):
+    model = Endereco
+    template_name = "viacep/viacep_detail.html"
+    context_object_name = "ceps"
+
+class Delete_Cep (DeleteView):
+    model = Endereco
+    template_name = "viacep/viacep_delete.html"
+    context_object_name = "ceps"
+    
 
 
 

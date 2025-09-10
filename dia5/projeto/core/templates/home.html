@@ -12,6 +12,15 @@
         <label for="cep">Digite o CEP:</label>
         <input type="text" id="cep" name="cep" required pattern="\d{5}-?\d{3}" title="Digite um CEP válido (ex: 12345-678)" />
         <button type="submit">Consultar</button>
-    </form>      
+    </form>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'lista_ceps' %}">Ver CEPs pesquisados</a></li>
+            <!-- Detalhes e deletar serão acessados pela lista, via links dinâmicos -->
+        </ul>
+    </nav>
 </body>
 </html>

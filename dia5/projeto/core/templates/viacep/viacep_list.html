@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lista de CEPs pesquisados</title>
+</head>
+<body>
+    <h1>CEPs Pesquisados</h1>
+
+    <ul>
+        {% for endereco in enderecos %}
+            <li>
+                <a href="{% url 'detalhes_cep' endereco.id %}">{{ endereco.cep }} - {{ endereco.rua }}</a>
+                - <a href="{% url 'deletar_cep' endereco.id %}">Deletar</a>
+            </li>
+        {% empty %}
+            <li>Nenhum CEP pesquisado ainda.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}">Voltar para Home</a>
+</body>
+</html>
