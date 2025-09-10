@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Consulta CEP - Home</title>
+</head>
+<body>
+    <h1>Consulta CEP</h1>
+
+    <form method="post" action="{% url 'consulta_cep' %}">
+        {% csrf_token %}
+        <label for="cep">Digite o CEP:</label>
+        <input type="text" id="cep" name="cep" required pattern="\d{5}-?\d{3}" title="Digite um CEP válido (ex: 12345-678)" />
+        <button type="submit">Consultar</button>
+    </form>      
+</body>
+</html>
