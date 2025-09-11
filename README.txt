@@ -82,3 +82,5 @@ O caminho seria: projeto > app > templates > home.html
 O caminho não é: projeto > app > templates > app > home.html
 
 Esse erro tornou as coisas mais complicadas durante o treinamento, mas foi resolvido no fim do dia.
+
+O primeiro exercício de hoje, dos dois, está salvo na pasta do dia 3, pois o mesmo foi iniciado no dia anterior.

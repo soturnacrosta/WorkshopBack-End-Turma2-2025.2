@@ -3,14 +3,16 @@ import requests
 from django.views.generic import FormView, DetailView, ListView, DeleteView
 from .forms import EnderecoForm
 from .models import Endereco
+from django.urls import reverse_lazy #posições relativas!
 
+# ... outros imports
 def home (request):
     return render(request, 'home.html') #apontado pelo views.home no urls
 # Create your views here.
 class Consulta_cep (FormView):
-    template_name = "consulta_cep.html"
+    template_name = "viacep/consulta_cep.html"
     form_class = EnderecoForm
-    success_url = "consulta_cep.html"
+    success_url = reverse_lazy ('consulta_cep') #cuidado com o template
 
     def form_valid(self, form):
         cep = form.cleaned_data["cep"].replace("-", "")
@@ -22,7 +24,7 @@ class Consulta_cep (FormView):
 
             if "erro" not in data:
 
-                cep_obj, created = Endereco.objects.update_or_create(
+                cep_obj, created = Endereco.objects.get_or_create(
                     cep=cep,
                     defaults={
 
@@ -33,7 +35,15 @@ class Consulta_cep (FormView):
                     },
                 )
 
-                self.object = cep_obj
+                contexto = { ################################################################################################
+
+                    'form': form,
+                    'endereco': cep_obj,  # 'endereco' é o nome da variável que o template vai usar
+
+                }
+                                                                        ########################################################
+                return render(self.request, self.template_name, contexto) #AQUI QUE FAZ OS DADOS APARECEREM NO RENEDER!!!!!!!!!!!
+                                                                        ########################################################
 
             else: 
 
@@ -45,7 +55,7 @@ class Consulta_cep (FormView):
             form.add_error("cep", "Erro ao consultar CEP na API em Endereco.")
             return self.form_invalid(form)
         
-        form.save()
+        #form.save() o save duplicaria os objetos retornados!! 
         return super().form_valid(form)
 
 
