@@ -8,10 +8,10 @@
     <h1>CEPs Pesquisados</h1>
 
     <ul>
-        {% for endereco in enderecos %}
+        {% for cep in ceps %}
             <li>
-                <a href="{% url 'detalhes_cep' endereco.id %}">{{ endereco.cep }} - {{ endereco.rua }}</a>
-                - <a href="{% url 'deletar_cep' endereco.id %}">Deletar</a>
+                <a href="{% url 'detalhes_cep' cep.id %}">{{ cep.cep }} - {{ cep.rua }}</a>
+                - <a href="{% url 'deletar_cep' cep.id %}">Deletar</a>
             </li>
         {% empty %}
             <li>Nenhum CEP pesquisado ainda.</li>
