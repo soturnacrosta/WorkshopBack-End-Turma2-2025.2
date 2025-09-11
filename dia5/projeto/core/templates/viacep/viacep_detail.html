@@ -5,12 +5,12 @@
     <title>Detalhes do CEP</title>
 </head>
 <body>
-    <h1>Detalhes do CEP {{ cep.cep }}</h1>
+    <h1>Detalhes do CEP {{ ceps.cep }}</h1>
 
-    <p><strong>Rua:</strong> {{ endereco.rua }}</p>
-    <p><strong>Bairro:</strong> {{ endereco.bairro }}</p>
-    <p><strong>Cidade:</strong> {{ endereco.cidade }}</p>
-    <p><strong>Estado:</strong> {{ endereco.estado }}</p>
+    <p><strong>Rua:</strong> {{ ceps.rua }}</p> <!-- se ligar no nome da variável que a classe passa!!!-->
+    <p><strong>Bairro:</strong> {{ ceps.bairro }}</p>
+    <p><strong>Cidade:</strong> {{ ceps.cidade }}</p>
+    <p><strong>Estado:</strong> {{ ceps.estado }}</p>
 
     <a href="{% url 'lista_ceps' %}">Voltar para Lista</a>
 </body>

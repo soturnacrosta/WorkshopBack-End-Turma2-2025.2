@@ -62,18 +62,19 @@ class Consulta_cep (FormView):
     #class Viace
 class Lista_Cep (ListView):
     model = Endereco 
-    template_name = "viacep/viacep_list.html"
-    context_object_name = "ceps"
+    template_name = "viacep/viacep_list.html" 
+    context_object_name = "ceps"#se ligar no nome da variável que a classe passa!!!
 
 class Details_Cep (DetailView):
     model = Endereco
     template_name = "viacep/viacep_detail.html"
-    context_object_name = "ceps"
+    context_object_name = "ceps"#se ligar no nome da variável que a classe passa!!!
 
 class Delete_Cep (DeleteView):
     model = Endereco
     template_name = "viacep/viacep_delete.html"
-    context_object_name = "ceps"
+    context_object_name = "ceps"#se ligar no nome da variável que a classe passa!!!
+    success_url = reverse_lazy ('consulta_cep') #cuidado com o template
     
 
 
