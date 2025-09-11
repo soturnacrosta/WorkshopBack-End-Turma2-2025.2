@@ -7,6 +7,7 @@ Objetivo:
 Esse repositório tem como objetivo guardar todas as tarefas realizadas no WorkShop Fábrica de Software 2025.2. 
 Essa documentação tem como objetivo, em um formato baseado no Scrum, registrar as atividades desse Workshop, além de documentar os softwares relevantes ou necessários desenvolvidos no mesmo.
 É valioso criar e desenvolver sempre a documentação para futuras necessidades e oportunidades.
+É necessário contextualizar que esse documento está sendo escrito em ambiente de treinamento, workshops e desafios coletivos.
 
 Desenvolvimento:
 
@@ -38,6 +39,9 @@ Então, desenvolvi quatro (04) aplicações Python puro:
 	03 - CalcGeoAvancada
 	04 - AnimaisSimples
 	
+O projeto do dia está na pasta:
+	> dia2 
+	
 Estas sendo em laboratório com ajuda de instrutor, monitores e colegas de trabalho.
 O desafio aqui foi o uso da sintaxe Python que é novidade para mim. O paradigma da Orientação a Objetos é confortável de se trabalhar.
 Esse dia agregou bastante quanto a troca de ideias com os colegas, aprendemos juntos. 
@@ -48,6 +52,9 @@ Foram desenvolvidas duas (02) aplicações Python puro:
 
 	05 - AnimaisAtributos
 	06 - ZooInteligente
+	
+O projeto do dia está na pasta:
+	> dia2 
 
 Estas sendo em casa. A dificuldade foi menor, pois as quatro aplicações anteriores me preparou e me deixou mais confortável com o desafio.
 Aqui foi iniciada a documentação do projeto.
@@ -64,6 +71,9 @@ Nesse dia foram desenvolvidas oito (08) aplicações Python puro para treinament
 	exercicio6.py
 	exercicio7.py
 	exercicioExtra.py
+	
+O projeto do dia está na pasta:
+	> dia3 
 
 Também foi estudado em casa Requests e em laboratório configuração Django. Notou-se uma melhora na navegação entre pastas do terminal.
 As maiores dificuldades foram no quesito configuração de ambiente virtual, onde é necessário estar ativado para fazer alterações nos requisitos técnicos de Python. Como por exemplo, é necessário ativá-lo para poder instalar o Django ou a biblioteca Requests.
@@ -84,3 +94,21 @@ O caminho não é: projeto > app > templates > app > home.html
 Esse erro tornou as coisas mais complicadas durante o treinamento, mas foi resolvido no fim do dia.
 
 O primeiro exercício de hoje, dos dois, está salvo na pasta do dia 3, pois o mesmo foi iniciado no dia anterior.
+O projeto do dia está na pasta:
+	> dia3 > projetoDjango
+	
+O segundo projeto está na pasta:
+	> dia4 > projeto
+
+Dia 2:
+
+Fomos desafiados a criar um CRUD - Create, Read, Update & Delete com Django e requisições de API em Python. Pudemos aprender e iniciar o desafio em sala de aula. Finalizei em casa.
+Os maiores desafios encontrados foram na hora de requisitar os dados da API e na hora de renderizá-los no template, ambos na página de consulta.
+Acabei por me prender bastante ao código mostrado em slide, primeiramente.
+Depois, para renderizar os dados nos templates, deve-se usar render() com return e o próprio template com o form. 
+Outro problema notável foi ao tentar requisitar os dados, o objeto Endereco era retornado duplicado pois o form.save() servia de segundo salvamento.
+Vale prestar atenção nos nomes de variáveis utilizados nas classes e na instância dos templates.
+O projeto do dia está na pasta:
+	> dia5 > projeto
+	
+Vale salientar que o GitIgnore não ignora automaticamente venvs que não seguem o padrão de nomeação venv ou .venv. Ao colocar nomes diferentes, o Git rastreia e envia para o repositório remoto.
