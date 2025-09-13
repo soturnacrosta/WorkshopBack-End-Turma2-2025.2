@@ -1,3 +1,5 @@
+# Dados autorais
+
 Processo seletivo Fábrica de Software 2025.2.
 
 Projetos do WorkShop Backend.
