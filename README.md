@@ -7,7 +7,7 @@ Este repositório remoto foi desenvolvido como parte do Workshop da Fábrica de 
 ### Back-end:
 
 - **Python 3**: Linguagem de programação base para lógica da aplicação.
-- **Django MVT**: 'Framework web Python' para desenvolvimento dos projetos, consumindo 'APIs', criando operações 'CRUD' e renderizando 'templates'.
+- **Django MVT e MVC**: 'Framework web Python' para desenvolvimento dos projetos, consumindo 'APIs', criando operações 'CRUD' e renderizando 'templates'.
 - **Requests**: Biblioteca para requisição das 'APIs' externa pública para os projetos.
 - **ViaCEP**: 'API' externa pública para consumo de dados.
 
