@@ -1,0 +1,19 @@
+<!-- templates/gato_confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Gato</title>
+</head>
+<body>
+    <h2>Confirmação de Exclusão</h2>
+
+    <p>Tem certeza que deseja excluir este gato?</p>
+    <img src="{{ gatos.url }}" alt="Imagem do gato" width="300"><br><br>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, Excluir</button>
+        <a href="{% url 'listar_gatos' %}">Cancelar</a>
+    </form>
+</body>
+</html>

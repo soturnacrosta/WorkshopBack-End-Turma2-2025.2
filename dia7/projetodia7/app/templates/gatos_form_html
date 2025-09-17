@@ -1,0 +1,18 @@
+<!-- templates/gato_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Gato</title>
+</head>
+<body>
+    <h2>Editar Gato</h2>
+
+    <form method="get">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar Alterações</button>
+    </form>
+
+    <a href="{% url 'listar_gatos' %}">⬅ Voltar para Lista</a>
+</body>
+</html>

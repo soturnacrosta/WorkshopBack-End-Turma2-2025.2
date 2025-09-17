@@ -1,0 +1,22 @@
+<!-- templates/gatos_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Gato</title>
+</head>
+<body>
+    <h2>Detalhes do Gato</h2>
+
+    <p><strong>Imagem:</strong></p>
+    <img src="{{ gatos.url }}" alt="Imagem do gato" width="300"><br><br>
+
+    <p><strong>Tem Raça (has_breeds)?</strong> {{ gatos.has_breeds }}</p>
+    <p><strong>Breed IDs:</strong> {{ gatos.breed_ids }}</p>
+    <p><strong>Category IDs:</strong> {{ gatos.category_ids }}</p>
+
+    <hr>
+    <a href="{% url 'editar_gato' gatos.pk %}">✏️ Editar</a> |
+    <a href="{% url 'excluir_gato' gatos.pk %}">🗑️ Excluir</a> |
+    <a href="{% url 'listar_gatos' %}">⬅ Voltar para Lista</a>
+</body>
+</html>

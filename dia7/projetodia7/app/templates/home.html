@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Gatos API</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Projeto dos Gatos 🐱</h1>
+    
+    <nav>
+        <ul>
+            <a href="{% url 'consulta_gato' %}">Consultar API (buscar gatos)</a>
+            <li><a href="{% url 'listar_gatos' %}">Ver Gatos Cadastrados</a></li>
+            <li><a href="{% url 'criar_gato' %}">Cadastrar Gato Manualmente</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
