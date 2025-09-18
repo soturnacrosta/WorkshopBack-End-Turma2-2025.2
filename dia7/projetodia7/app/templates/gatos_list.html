@@ -8,9 +8,9 @@
     <h2>Gatos Cadastrados</h2>
 
     <ul>
-        {% for gato in Gatos %}
+        {% for gato in gatos %}
             <li>
-                <a href="{% url 'gatos_detail' gato.pk %}">
+                <a href="{% url 'detalhar_gato' gato.pk %}"> <!-- o correto é mostrar os detalhes de cada gato-->
                     🐱 {{ gato.url }}
                 </a>
             </li>
