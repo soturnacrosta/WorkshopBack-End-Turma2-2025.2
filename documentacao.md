@@ -211,6 +211,26 @@ Nesse circuito foram entregues as aplicações do projeto final, assim como os d
 
 Como conhecimento valioso destaco a capacidade adquirida de entender problemas que aparecem no terminal.
 
+## Circuito 4:
+
+### Dia 1:
+
+Em ambiente de trabalho, tivemos reforço em API Rest. Fomos propostos a consumir uma API externa pública e entregar com trabalho em equipe, mas tive de fazer sozinho por desencontros devido a duas aulas de faculdade em sequência.
+
+A API escolhida foi a The Cat API que não precisa de cadastro para ser utilizada. Nesse mesmo dia iniciaram-se os trabalhos, mas ficou confuso o funcionamento dessa API.
+
+### Dia 2:
+
+Em casa, com mais descanso, o funcionamento da API ficou mais claro: o projeto estava sendo arquitetado para requerer arquivos `JSON` no preenchimento de formulário, por causa do `models` modelado dessa forma. Para consertar, ao invés de construir um `models`que pedisse `JSON`, agora pediria Strings e Integers. Não faz sentido pedir arquivos `JSON` para preencher um formulário sobre gatos.
+
+No mais, a API parece não ser tão confiável pois não está retornando imagens de gatos como deveria. A lógica de negócio e código parecem estar certas, as renderizações estão funcionando, mas não está retornando um `Gato` da API. Todavia, o CRUD está funcional.
+
+Esse projeto está na pasta:
+
+```
+└── dia7/
+    └── projetodia7/
+```
 
 
 
