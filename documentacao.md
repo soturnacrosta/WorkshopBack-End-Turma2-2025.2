@@ -142,7 +142,7 @@ O segundo projeto está na pasta:
 
 ### Dia 2:
 
-Fomos desafiados a criar um CRUD - Create, Read, Update & Delete com Django e requisições de API em Python. Pudemos aprender e iniciar o desafio em sala de aula. Finalizei em casa.
+Fomos desafiados a criar um CRUD - Create, Read, Update & Delete com Django e requisições de API em Python. Pudemos aprender e iniciar o desafio em ambiente de trabalho. Finalizei em casa.
 Os maiores desafios encontrados foram na hora de requisitar os dados da API e na hora de renderizá-los no template, ambos na página de consulta.
 
 Acabei por me prender bastante ao código mostrado em slide, primeiramente.
@@ -232,5 +232,8 @@ Esse projeto está na pasta:
     └── projetodia7/
 ```
 
+Já em ambiente de trabalho, os colegas que não finalizaram a aplicação tiveram a oportunidade de finalizar. Como eu já havia finalizado, pude ajudá-los com suas dificuldades.
+
+Um problema insistente que não verificamos foram as quedas na conexão com a internet.
 
 
