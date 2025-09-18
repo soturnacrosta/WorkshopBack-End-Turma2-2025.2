@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Gatos
 
-# Register your models here.
+# Registre seu modelo aqui
+admin.site.register(Gatos)
