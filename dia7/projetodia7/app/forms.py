@@ -3,8 +3,9 @@ from .models import Gatos
 
 class ConsultaGatosForm(forms.Form):
 
-    breed_ids = forms.CharField(max_length=50, required=False, label="ID da Raça (Ex: beng)")
-    category_ids = forms.CharField(max_length=50, required=False, label="ID da Categoria (Ex: 1)")
+    breed_ids = forms.CharField(max_length=50, required=False, label="ID da Raça")
+    category_ids = forms.CharField(max_length=50, required=False, label="ID da Categoria")
+
 
 class GatosForm (forms.ModelForm):
     class Meta:

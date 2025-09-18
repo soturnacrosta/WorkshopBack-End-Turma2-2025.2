@@ -9,11 +9,14 @@ def home (requests):
 
     return render (requests, 'home.html')
 
+
 class ConsultaGato(View):
+    # Este método exibe o formulário quando a página é acessada pela primeira vez.
     def get(self, request):
         form = ConsultaGatosForm()
         return render(request, 'consulta_gato.html', {'form': form})
 
+    # Este método processa os dados do formulário quando ele é submetido.
     def post(self, request):
         form = ConsultaGatosForm(request.POST)
 
@@ -21,7 +24,6 @@ class ConsultaGato(View):
             breed_ids = form.cleaned_data.get('breed_ids', '')
             category_ids = form.cleaned_data.get('category_ids', '')
             
-            # Constrói a URL da API com base nos dados do formulário
             url = f"https://api.thecatapi.com/v1/images/search?limit=3"
             
             if breed_ids:
@@ -34,7 +36,6 @@ class ConsultaGato(View):
             if response.status_code == 200:
                 dados = response.json()
                 
-                # Se a API retornou algum dado, salve o primeiro gato e redirecione.
                 if dados:
                     item = dados[0]
                     novo_gato = Gatos.objects.create(
@@ -45,11 +46,12 @@ class ConsultaGato(View):
                     )
                     return redirect('detalhar_gato', pk=novo_gato.pk)
                 else:
-                    # Se a API não retornou nenhum gato, apenas mostre a página novamente
-                    # com uma mensagem de erro, ou redirecione para a consulta.
-                    return redirect('consulta_gato')
-            
-        # Se o formulário não for válido, renderiza a página novamente com os erros
+                    context = {'form': form, 'mensagem': 'Nenhum gato encontrado para este filtro.'}
+                    return render(request, 'consulta_gato.html', context)
+            else:
+                context = {'form': form, 'mensagem': f'Erro ao consultar a API. Status: {response.status_code}'}
+                return render(request, 'consulta_gato.html', context)
+        
         return render(request, 'consulta_gato.html', {'form': form})
         
 class GatoCreateView (CreateView):
