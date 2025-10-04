@@ -110,7 +110,7 @@ Foram desenvolvidos quatorze (14) softwares, iniciada a documentação, criado e
 
 ### Dia 1:
 
-Aprofundando no Django, começamos a estudar rotas, requests para API e configuração de API. A maior dificuldade esteve em entender que a pasta 'app' não é criada depois de 'templates' como eu havia entendido através de instruções da inteligencia artificial. 'app' fica antes de 'template', em seguida vem a página renderizada.
+Aprofundando no Django, começamos a estudar rotas, requests para 'API' e configuração de 'API'. A maior dificuldade esteve em entender que a pasta 'app' não é criada depois de 'templates' como eu havia entendido através de instruções da inteligencia artificial. 'app' fica antes de 'template', em seguida vem a página renderizada.
 
 O caminho seria: 
 
@@ -142,8 +142,8 @@ O segundo projeto está na pasta:
 
 ### Dia 2:
 
-Fomos desafiados a criar um CRUD - Create, Read, Update & Delete com Django e requisições de API em Python. Pudemos aprender e iniciar o desafio em ambiente de trabalho. Finalizei em casa.
-Os maiores desafios encontrados foram na hora de requisitar os dados da API e na hora de renderizá-los no template, ambos na página de consulta.
+Fomos desafiados a criar um CRUD - Create, Read, Update & Delete com Django e requisições de 'API' em Python. Pudemos aprender e iniciar o desafio em ambiente de trabalho. Finalizei em casa.
+Os maiores desafios encontrados foram na hora de requisitar os dados da 'API' e na hora de renderizá-los no template, ambos na página de consulta.
 
 Acabei por me prender bastante ao código mostrado em slide, primeiramente.
 
@@ -166,7 +166,7 @@ Nesse dia não foi entregue o requisito de estrutura base.
 
 ### Dia 3:
 
-E finalmente, fomos desafiados a criar uma API Rest. Utilizando o modelo Class Based View e a ferramenta Django Rest Framework. Os maiores empecilhos foram na criação das 'Routes' e sincronização de 'models' com a API.
+E finalmente, fomos desafiados a criar uma 'API Rest'. Utilizando o modelo Class Based View e a ferramenta Django Rest Framework. Os maiores empecilhos foram na criação das 'Routes' e sincronização de 'models' com a 'API'.
 
 O projeto do dia está na pasta:
 
@@ -179,7 +179,7 @@ O `README.md` foi formatado em markdown e enviado para o Github.
 
 ### Resultados do Circuito 2:
 
-Foram desenvolvidas quatro (04) aplicações, aplicando conceitos de Python, Django Framework, Tamplete Based View e Class Based View. Além de consumo e criação de API e requerimento de CRUD (create-read-update-delete).
+Foram desenvolvidas quatro (04) aplicações, aplicando conceitos de Python, Django Framework, Tamplete Based View e Class Based View. Além de consumo e criação de 'API' e requerimento de CRUD (create-read-update-delete).
 
 A documentação foi melhor desenvolvida e formatada em markdown.
 
@@ -187,13 +187,13 @@ A documentação foi melhor desenvolvida e formatada em markdown.
 
 ### Dia 1:
 
-Dia de receber o desafio final. Primeiramente, me propus a desenvolver uma API que fosse alimentada por uma API pública e depois renderizada em template, assim misturando os modelos MVT e MVC. A API pública seria 'JSONPlaceholder', que simula um sistema de blog. Elaborei os requisitos e objetivos e procedi a começar a programação. Logo vi que estava bem complexo para minhas capacidades.
+Dia de receber o desafio final. Primeiramente, me propus a desenvolver uma 'API' que fosse alimentada por uma 'API' pública e depois renderizada em template, assim misturando os modelos MVT e MVC. A 'API' pública seria 'JSONPlaceholder', que simula um sistema de blog. Elaborei os requisitos e objetivos e procedi a começar a programação. Logo vi que estava bem complexo para minhas capacidades.
 
 Decidi por recomeçar do zero para algo mais simples que me fizesse depender menos de inteligencia artificial, algo que eu pudesse fazer mais por eu mesmo.
 
 ### Dia 2:
 
-Mantendo a API 'JSONPlaceholder', elaborei por apenas consumir a API e renderizar nos templates, criando operações de CRUD.
+Mantendo a 'API' 'JSONPlaceholder', elaborei por apenas consumir a 'API' e renderizar nos templates, criando operações de CRUD.
 
 Construí a aplicação tranquilamente com os conhecimentos dados em ambiente de trabalho e ajuda dos materiais de estudo dados, sendo as maiores dificuldades nas variáveis nos caminhos das rotas (urls) que devem ter os mesmos nomes das variáveis dos botões dos templates.
 
@@ -215,15 +215,15 @@ Como conhecimento valioso destaco a capacidade adquirida de entender problemas q
 
 ### Dia 1:
 
-Em ambiente de trabalho, tivemos reforço em API Rest. Fomos propostos a consumir uma API externa pública e entregar com trabalho em equipe, mas tive de fazer sozinho por desencontros devido a duas aulas de faculdade em sequência.
+Em ambiente de trabalho, tivemos reforço em 'API Rest'. Fomos propostos a consumir uma 'API' externa pública e entregar com trabalho em equipe, mas tive de fazer sozinho por desencontros devido a duas aulas de faculdade em sequência.
 
-A API escolhida foi a The Cat API que não precisa de cadastro para ser utilizada. Nesse mesmo dia iniciaram-se os trabalhos, mas ficou confuso o funcionamento dessa API.
+A 'API' escolhida foi a The Cat API que não precisa de cadastro para ser utilizada. Nesse mesmo dia iniciaram-se os trabalhos, mas ficou confuso o funcionamento dessa 'API'.
 
 ### Dia 2:
 
-Em casa, com mais descanso, o funcionamento da API ficou mais claro: o projeto estava sendo arquitetado para requerer arquivos `JSON` no preenchimento de formulário, por causa do `models` modelado dessa forma. Para consertar, ao invés de construir um `models`que pedisse `JSON`, agora pediria Strings e Integers. Não faz sentido pedir arquivos `JSON` para preencher um formulário sobre gatos.
+Em casa, com mais descanso, o funcionamento da 'API' ficou mais claro: o projeto estava sendo arquitetado para requerer arquivos `JSON` no preenchimento de formulário, por causa do `models` modelado dessa forma. Para consertar, ao invés de construir um `models`que pedisse `JSON`, agora pediria Strings e Integers. Não faz sentido pedir arquivos `JSON` para preencher um formulário sobre gatos.
 
-No mais, a API parece não ser tão confiável pois não está retornando imagens de gatos como deveria. A lógica de negócio e código parecem estar certas, as renderizações estão funcionando, mas não está retornando um `Gato` da API. Todavia, o CRUD está funcional.
+No mais, a 'API' parece não ser tão confiável pois não está retornando imagens de gatos como deveria. A lógica de negócio e código parecem estar certas, as renderizações estão funcionando, mas não está retornando um `Gato` da 'API'. Todavia, o CRUD está funcional.
 
 Esse projeto está na pasta:
 
@@ -236,4 +236,10 @@ Já em ambiente de trabalho, os colegas que não finalizaram a aplicação tiver
 
 Um problema insistente que não verificamos foram as quedas na conexão com a internet.
 
+### Dia 3:
 
+Em trabalho, assistimos a uma palestra sobre profissionais que se permitem se adaptar aos avanços no mercado de tenologia em relação a inteligencia artificial e fomos dispensados em seguida.
+
+### Resultados do Circuito 4:
+
+Neste circuito pudemos reforçar nossos conhecimentos sobre 'API Rest'. Destaco como conhecimento diferencial a capacidade de escolher 'APIs' realmente funcionais e simples.
